@@ -1,6 +1,14 @@
-.nav-style( @direction:column, @justify:center, @align:center ){
+.flex-box( @direction:column, @justify:center, @align
+:center){
     display: flex;
     flex-direction: @direction;
     justify-content: @justify;
     align-items: @align;
+}
+
+.contact-btn(@size: 100px, @font-color: @grey){
+      width: @size;
+      height: 45px;
+      font-size: 1.6rem;
+      color: @font-color;
 }

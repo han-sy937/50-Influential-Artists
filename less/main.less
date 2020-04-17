@@ -1,44 +1,98 @@
 .title-container{
 
-    // position: relative;
-    // width: 50%;
-
-    // img{
-    //     width: 100%;
-    //     height: auto;
-
-    //     .btn {
-    //         position: absolute;
-    //         top: 50%;
-    //         left: 50%;
-    //         transform: translate(-50%, -50%);
-    //         -ms-transform: translate(-50%, -50%);
-    //         background-color: #555;
-    //         color: white;
-    //         font-size: 16px;
-    //         padding: 12px 24px;
-    //         border: none;
-    //         cursor: pointer;
-    //         border-radius: 5px;
-    // }
-    border: 1px solid red;
-    height:70vh;
-    padding: 10%;
-    background-color:#E0FFFF;
-    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTWCYkUbg_HDDBiE90px6JVmC9QaDcFUqq9JsE1tv9tyHTxURLb&usqp=CAU');
+    width: 80%;
+    // border: 1px solid red;
+    height:50vh;
+    margin-bottom: 30px;
+    // padding: 50%;
+    background-image:url('../assets/home.png');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
+    padding: 80px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    .flex-box(column, center, center);
+
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
 
 
+    h1{
+        // border: 1px solid red;
+        width: 40%;
+        color: white;
+        font-size: 4rem;
+        text-align: center;
 
+        @media @phone{
+            width: 100%;
+            font-size: 3rem;
+        }
+    }
+
+    .btn{
+
+        .contact-btn(@size: 150px, @font-color: @grey);
+        // border: 1px solid red;
+
+        @media @phone{
+            background-color: white;
+            .contact-btn(@size: 100px, @font-color: @grey);
+            
+
+        }
+        
+    }
+   
 }
 
-hr{
-    padding: 5% 0;
+.artists-container{
+    // border: 1px solid red;
+    .flex-box(row, space-evenly,start);
+    text-align: center;
+    padding-bottom: 5%;
+
+    @media @phone{
+        .flex-box(column, space-around, start);
+        
+    }
+
+
+    .artist{
+        // border: 1px solid red;
+        width: 100%;
+        // padding: 5% 0%;
+        margin-top: 3%;
+
+        .flex-box(column, center, center);
+
+
+        img{
+            width: 70%;
+            border-radius: 3%;
+            margin: 0 auto;
+            // padding: 5%;
+            :hover{
+                opacity: 80%;
+            }
+        }
+
+        a{
+            // border: 1px solid red;
+            padding: 5% 0;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: @font1;
+        }
+
+        .bio{
+            width: 90%;
+            font-size: 1.2rem;
+            margin: 0 auto;
+        }
+    }
 }
+
+
